@@ -12,7 +12,7 @@ function myMenuFunction() {
     i.className = "nav-menu";
   }
 }
-
+// ------------login screen mobail
 function checkWindowSize() {
   const loginButton = document.getElementById("loginButton");
   if (window.innerWidth < 768) {
@@ -25,6 +25,9 @@ function checkWindowSize() {
 checkWindowSize(); // اجرای تابع برای بارگذاری اولیه
 window.addEventListener("resize", checkWindowSize); // اضافه کردن event listener برای تغییر اندازه صفحه
 
+const loginButton = document.getElementById("loginButton");
+loginButton.addEventListener("click", function() {
+  window.location.href = "../index/log-sing.html";})
 // -------------------emoji typing
 
 var typed = new Typed(".type", {
