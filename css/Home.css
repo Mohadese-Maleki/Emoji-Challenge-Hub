@@ -61,6 +61,7 @@ body {
 .info-BtnS:hover {
   background: rgba(255, 255, 255, 0.4);
 }
+
 .info-Subtitle {
   margin-top: 30px;
   font-weight: 500;
@@ -176,7 +177,7 @@ body {
     display: block;
   }
   .nav-menu-btn i {
-    font-size: 25px;
+    font-size: 15px;
     color: #fff;
     padding: 10px;
     background: rgba(255, 255, 255, 0.2);
