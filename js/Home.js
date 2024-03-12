@@ -1,9 +1,12 @@
 // -------log and sing btn
+
 document.getElementById("loginBtn").addEventListener("click", function () {
   window.location.href = "../index/log-sing.html";
 });
-
-// ---------------
+const loginButton = document.getElementById("loginButton");
+loginButton.addEventListener("click", function() {
+  window.location.href = "../index/log-sing.html";})
+// ---------------menu nav mobile
 function myMenuFunction() {
   var i = document.getElementById("navMenu");
   if (i.className === "nav-menu") {
@@ -25,9 +28,6 @@ function checkWindowSize() {
 checkWindowSize(); // اجرای تابع برای بارگذاری اولیه
 window.addEventListener("resize", checkWindowSize); // اضافه کردن event listener برای تغییر اندازه صفحه
 
-const loginButton = document.getElementById("loginButton");
-loginButton.addEventListener("click", function() {
-  window.location.href = "../index/log-sing.html";})
 // -------------------emoji typing
 
 var typed = new Typed(".type", {
