@@ -3,7 +3,6 @@
 document.getElementById("loginBtn").addEventListener("click", function () {
   window.location.href = "log-sing.html";
 });
-
 // ---------------menu nav mobile
 function myMenuFunction() {
   var i = document.getElementById("navMenu");
@@ -45,13 +44,10 @@ eyeicon.forEach((eyeicon) => {
   });
 });
 // --------------------log in & start game
-document.getElementById('loginButton').addEventListener('click', function() {
-
-  window.location.href = 'log-sing.html';
+document.getElementById("loginButton").addEventListener("click", function () {
+  window.location.href = "log-sing.html";
 });
 
 document.getElementById("stGame").addEventListener("click", function (event) {
-    
-      window.location.href = "emoji.html";
-    
-  });
+  window.location.href = "emoji.html";
+});
