@@ -1,11 +1,11 @@
 // -------log and sing btn
 
 document.getElementById("loginBtn").addEventListener("click", function () {
-  window.location.href = "/log-sing.html";
+  window.location.href = "log-sing.html";
 });
 const loginButton = document.getElementById("loginButton");
 loginButton.addEventListener("click", function () {
-  window.location.href = "/log-sing.html";
+  window.location.href = "log-sing.html";
 });
 // ---------------menu nav mobile
 function myMenuFunction() {
