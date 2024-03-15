@@ -115,8 +115,8 @@ header {
   color: #fff;
   cursor: pointer;
 }
-
 .error {
+  height: 15px;
   display: flex;
   align-items: center;
   font-size: 15px;
@@ -157,36 +157,36 @@ header {
   border-color: rgba(148, 0, 0, 0.833);
 }
 .two-col {
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    font-size: 15px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+.two label a {
+  text-decoration: none;
+  color: #fff;
+}
+.two a:hover {
+  text-decoration: underline;
+  color: #64d5fb;
+}
+@media only screen and (max-width: 540px) {
+  .wrapper {
+    min-height: 100vh;
   }
-  
-  .two label a {
-    text-decoration: none;
-    color: #fff;
+  .form-box {
+    width: 100%;
+    height: 500px;
   }
-  .two a:hover {
-    text-decoration: underline;
-    color: #64d5fb;
+  .register-container,
+  .login-container {
+    width: 100%;
+    padding: 0 20px;
   }
-  @media only screen and (max-width: 540px) {
-    .wrapper {
-      min-height: 100vh;
-    }
-    .form-box {
-      width: 100%;
-      height: 500px;
-    }
-    .register-container,
-    .login-container {
-      width: 100%;
-      padding: 0 20px;
-    }
-    .register-container .two-forms {
-      flex-direction: column;
-      gap: 0;
-    }
+  .register-container .two-forms {
+    flex-direction: column;
+    gap: 0;
   }
+}
