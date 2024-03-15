@@ -1,11 +1,12 @@
 // -------log and sing btn
 
 document.getElementById("loginBtn").addEventListener("click", function () {
-  window.location.href = "../index/log-sing.html";
+  window.location.href = "/log-sing.html";
 });
 const loginButton = document.getElementById("loginButton");
-loginButton.addEventListener("click", function() {
-  window.location.href = "../index/log-sing.html";})
+loginButton.addEventListener("click", function () {
+  window.location.href = "/log-sing.html";
+});
 // ---------------menu nav mobile
 function myMenuFunction() {
   var i = document.getElementById("navMenu");
@@ -46,3 +47,14 @@ eyeicon.forEach((eyeicon) => {
     eyeicon.classList.replace("bxs-hide", "bx-show");
   });
 });
+// --------------------log in & start game
+document.getElementById('loginButton').addEventListener('click', function() {
+
+  window.location.href = 'log-sing.html';
+});
+
+document.getElementById("stGame").addEventListener("click", function (event) {
+    
+      window.location.href = "emoji.html";
+    
+  });

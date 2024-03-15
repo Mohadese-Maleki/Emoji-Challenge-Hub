@@ -104,5 +104,5 @@ document.getElementById('submit').addEventListener('click', function() {
   localStorage.setItem('users', JSON.stringify(users));
 
   // انتقال به صفحه index/emoji.html
-  window.location.href = 'index/emoji.html';
+  window.location.href = '/index.html';
 });
