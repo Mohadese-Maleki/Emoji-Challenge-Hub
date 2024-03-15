@@ -20,6 +20,28 @@ function register() {
   x.style.opacity = 1;
   y.style.opacity = 2;
 }
+// ----RESPONSIV
+window.addEventListener('resize', function() {
+  if (window.innerWidth < 768) {
+    // اگر اندازه صفحه کمتر از 768 پیکسل باشد
+    a.style.display = "block";
+    b.style.display = "block";
+    x.style.left = "0";
+    y.style.right = "0";
+    x.style.opacity = 1;
+    y.style.opacity = 1;
+  } else {
+    // اگر اندازه صفحه بیشتر از 768 پیکسل باشد
+    a.style.display = "none";
+    b.style.display = "none";
+    x.style.left = "0";
+    y.style.right = "0";
+    x.style.opacity = 1;
+    y.style.opacity = 1;
+  }
+});
+
+
 
 // -------Form Validation With Localstorage
 // let btn = document.getElementById("submit");
@@ -64,45 +86,51 @@ function register() {
 // });
 function checkUsername() {
   // اعتبارسنجی نام کاربری
-  let username = document.getElementById('userName').value;
-  if (username === '') {
-    alert('Please enter a username');
+  let username = document.getElementById("userName").value;
+  if (username === "") {
+    alert("Please enter a username");
     return;
   }
 }
 
-document.getElementById('submit').addEventListener('click', function() {
+document.getElementById("submit").addEventListener("click", function () {
   // اعتبارسنجی ایمیل
-  let email = document.getElementById('email').value;
-  if (!email.includes('@') || !email.includes('.com')) {
-    alert('Please enter a valid email address (e.g. example@gmail.com)');
+  let email = document.getElementById("email").value;
+  if (!email.includes("@") || !email.includes(".com")) {
+    alert("Please enter a valid email address (e.g. example@gmail.com)");
     return;
   }
 
   // اعتبارسنجی رمز عبور
-  let password = document.getElementById('password').value;
-  let confirmPassword = document.getElementById('confirPass').value;
-  if (password.length < 8 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-    alert('Password must be at least 8 characters long and contain both letters and numbers');
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirPass").value;
+  if (
+    password.length < 8 ||
+    !/\d/.test(password) ||
+    !/[a-zA-Z]/.test(password)
+  ) {
+    alert(
+      "Password must be at least 8 characters long and contain both letters and numbers"
+    );
     return;
   }
   if (password !== confirmPassword) {
-    alert('Passwords do not match');
+    alert("Passwords do not match");
     return;
   }
 
   // ذخیره‌سازی اطلاعات کاربر
   let userData = {
-    username: document.getElementById('userName').value,
-    email: document.getElementById('email').value,
-    password: document.getElementById('password').value
+    username: document.getElementById("userName").value,
+    email: document.getElementById("email").value,
+    password: document.getElementById("password").value,
   };
 
   // ذخیره‌سازی اطلاعات در localStorage
-  let users = JSON.parse(localStorage.getItem('users')) || [];
+  let users = JSON.parse(localStorage.getItem("users")) || [];
   users.push(userData);
-  localStorage.setItem('users', JSON.stringify(users));
+  localStorage.setItem("users", JSON.stringify(users));
 
   // انتقال به صفحه index/emoji.html
-  window.location.href = '/index.html';
+  window.location.href = "/index.html";
 });
